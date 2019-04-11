@@ -5,13 +5,13 @@ class DogsController < ApplicationController
 
     def show
         @dog=Dog.find(params[:id])
+        @minions=Employee.select{|e| e.dog==@dog.name}
     end
 
     def new
     end
 
     def create
-        
     end
 
 end
